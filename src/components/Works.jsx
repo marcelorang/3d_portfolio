@@ -67,8 +67,8 @@ const Works = () => {
       <motion.div
         variants={textVariant()}
       >
-        <p className={styles.sectionSubText}>My projects</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+        <p className={styles.sectionSubText}>Meus projetos</p>
+        <h2 className={styles.sectionHeadText}>Projetos.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -80,13 +80,7 @@ const Works = () => {
            max-w-3xl 
            leading-[30px]'
         >
-          I'm a skilled software developer with experience
-          in TypeScript and JavaScript, and expertise in frameworks
-          like React, Node.js, and Three.js.
-          I'm a quick learner and collaborate closely with clients
-          to create efficient, scalable, and user-friendly solutions
-          that solve real-world problems.
-          Let's work together to bring your ideas to life!
+          Aqui você pode ver alguns dos trabalhos nos quais colaborei como desenvolvedor Frontend e Fullstack.
         </motion.p>
       </div>
 
