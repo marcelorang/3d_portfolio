@@ -28,8 +28,21 @@ import {
   mysql,
   ionic,
   ecommerce,
+  ecommerce1,
+  ecommerce2,
+  ecommerce3,
+  ecommerce4,
+  ecommerce5,
   medzip,
-  olhonolance,
+  medzip1,
+  medzip3,
+  medzip4,
+  // olhonolance,
+  olhonolance1,
+  olhonolance2,
+  olhonolance3,
+  olhonolance4,
+  olhonolance5,
 } from "../assets";
 
 export const navLinks = [
@@ -226,7 +239,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: ecommerce,
+    image: [
+      ecommerce,
+      ecommerce1,
+      ecommerce2,
+      ecommerce3,
+      ecommerce4,
+      ecommerce5,
+    ],
     source_code_link: "https://github.com/marcelorang/ecommerce",
   },
   {
@@ -247,9 +267,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: medzip,
+    image: [medzip, medzip1, medzip3, medzip4],
     source_code_link: "https://www.medzip.com.br",
   },
+
   {
     name: "Olho no lance",
     description:
@@ -268,7 +289,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: olhonolance,
+    image: [
+      // olhonolance,
+      olhonolance5,
+      olhonolance1,
+      olhonolance2,
+      olhonolance3,
+      olhonolance4,
+    ],
     source_code_link: "https://github.com/",
   },
 ];

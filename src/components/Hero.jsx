@@ -5,9 +5,9 @@ import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <div className={`relative inset-0 w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute top-[120px] inset-x-0  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
@@ -18,18 +18,22 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Oi, eu sou <span className='text-[#915EFF]'>Marcelo</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Eu desenvolvo em 3D , interfaces <br className='sm:block hidden' />
+          <p className={`${styles.heroSubText} ma-2 text-white-100`}>
+            Desenvolvo em 3D , interfaces <br className='sm:block hidden' />
             de usuários, aplicações web e Mobile.
           </p>
         </div>
       </div>
+      <div className={`relative top-[100px] h-[800px] w-full`}>
+        <ComputersCanvas />
+      </div>
 
-      <ComputersCanvas />
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+
+
+      {/* <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center '>
         <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 '>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -43,8 +47,8 @@ const Hero = () => {
             />
           </div>
         </a>
-      </div>
-    </section>
+      </div> */}
+    </div>
   );
 };
 
