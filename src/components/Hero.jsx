@@ -1,9 +1,29 @@
+import { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600); // Ajuste conforme necessário
+    };
+
+    // Adiciona um ouvinte de redimensionamento para verificar a largura da tela
+    window.addEventListener('resize', handleResize);
+
+    // Inicializa o estado com base na largura da tela atual
+    handleResize();
+
+    // Remove o ouvinte ao desmontar o componente
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className={`relative inset-0 w-full h-screen mx-auto`}>
       <div
@@ -24,9 +44,12 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className={`relative top-[100px] h-[800px] w-full`}>
-        <ComputersCanvas />
-      </div>
+      {/* Renderiza ComputersCanvas apenas se não for um dispositivo móvel */}
+      {!isMobile && (
+        <div className={`relative top-[100px] h-[800px] w-full `}>
+          <ComputersCanvas />
+        </div>
+      )}
 
 
 

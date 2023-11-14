@@ -39,13 +39,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
-      <Tilt
+      <div
 
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450
-        }}
+
         className='bg-tertiary p-5 rounded-2xl'
       >
         <div className=''>
@@ -115,7 +111,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             </p>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   )
 }
